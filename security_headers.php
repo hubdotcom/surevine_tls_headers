@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: HTTP Headers
+ * Plugin Name: Security Headers
  * Plugin URI: http://surevine.com/
  * Description: Sets security related headers (HSTS etc)
  * Version: 0.8
@@ -67,7 +67,7 @@ function security_headers_insert() {
 
 }
 add_action('send_headers', 'security_headers_insert');
-// admin section doesn't have a send_headers action so we abuse init
+// admin section doesn't have a c action so we abuse init
 // https://codex.wordpress.org/Plugin_API/Action_Reference
 add_action('admin_init', 'security_headers_insert');
 
